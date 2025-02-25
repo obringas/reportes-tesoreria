@@ -1,0 +1,27 @@
+<p-card>    
+    <div class="row mb-3">
+        <div class="col-md-3">
+          <label>Campañas (separadas por coma)</label>
+          <input type="text" class="form-control" [(ngModel)]="filtro.camp">
+        </div>
+        <div class="col-md-3">
+          <label>Nro Socio</label>
+          <input type="number"  [(ngModel)]="filtro.socio"
+          class="form-control" 
+          containerStyleClass="w-full"
+          pInputText
+          >
+        </div>
+        <div class="col-md-3">
+          <label>Nro FET</label>
+          <input type="text" class="form-control" [(ngModel)]="filtro.fet">
+        </div>
+        <div class="col-md-2 d-flex align-items-end">
+          <button class="btn btn-primary w-100" (click)="buscar()">Buscar</button>
+        
+        </div>
+      </div>
+    
+
+</p-card>
+

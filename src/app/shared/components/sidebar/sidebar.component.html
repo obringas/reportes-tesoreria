@@ -1,0 +1,29 @@
+<aside class="sidebar">
+  <div class="user-profile">
+    <img src="/assets/images/user.png" alt="User">
+    <div>
+      <h4>Admin</h4>
+      <p>ADMINISTRADOR</p>
+    </div>
+  </div>
+
+  <nav class="nav-links">
+    <ul>
+      <li><a routerLink="/"><i class="bi bi-house-door"></i> Inicio</a></li>
+
+      <!-- Menú "Reportes" con Submenú -->
+      <li class="has-submenu">
+        <a (click)="toggleSubmenu('reportes')"><i class="bi bi-bar-chart"></i> Reportes</a>
+        <ul *ngIf="submenus['reportes']" class="submenu">
+          <li><a routerLink="/reportes/components/liquidaciones-por-socio"><i class="bi bi-file-earmark-text"></i> Liquidaciones por Socio</a></li>
+        </ul>
+      </li>
+
+      <li><a routerLink="/"><i class="bi bi-gear"></i> Configuración</a></li>
+    </ul>
+  </nav>
+
+  <button class="logout-btn" (click)="logout()">
+    <i class="pi pi-sign-out"></i> Cerrar Sesión
+  </button>
+</aside>

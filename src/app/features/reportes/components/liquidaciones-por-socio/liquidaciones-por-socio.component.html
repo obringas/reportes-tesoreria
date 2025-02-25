@@ -1,0 +1,31 @@
+<div class="container mt-4">
+  
+  <h2>Reporte de Entregas</h2>
+
+  <!-- Tarjeta de Búsqueda -->
+  <p-card class="custom-card">
+    <app-busqueda-por-socio (clickBuscar)="getDatos($event)"></app-busqueda-por-socio>
+  </p-card>
+
+  <!-- Sección de Mensajes -->
+  <div class="mt-3">
+    <div *ngIf="cargando" class="alert alert-info">Cargando datos...</div>
+    <div *ngIf="errorMensaje" class="alert alert-danger">{{ errorMensaje }}</div>
+    <div *ngIf="!cargando && resultado.length > 0" class="alert alert-info">
+      Se encontraron {{ resultado.length }} registros.
+    </div>
+    <div *ngIf="!cargando && resultado.length === 0" class="alert alert-warning">
+      No hay datos para mostrar.
+    </div>
+  </div>
+
+  <!-- Tarjeta de Resultados -->
+  <p-card header="Liquidaciones por Socio" class="custom-card"  *ngIf="!cargando && resultado.length > 0">
+    <div *ngIf="resultado.length > 0">
+      <button pButton type="button" label="Exportar a Excel" class="p-button-success mb-3" (click)="exportToExcel()"></button>
+
+      <app-tabla-liquidaciones-socio [datos]="resultado"></app-tabla-liquidaciones-socio>
+    </div>
+  </p-card>
+
+</div>

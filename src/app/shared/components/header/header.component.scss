@@ -1,0 +1,44 @@
+.main-header {
+  width: 100%;
+  height: 60px; /* Ajusta según la altura deseada */
+  background: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  .logo {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+    color: #333;
+
+    img {
+      height: 40px;
+      margin-right: 10px;
+    }
+  }
+
+  .user-info {
+    display: flex;
+    align-items: center;
+
+    img {
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    span {
+      font-size: 16px;
+      color: #555;
+    }
+  }
+}

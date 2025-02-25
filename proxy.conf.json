@@ -1,0 +1,9 @@
+{
+    "/api": {
+      "target": "http://coop_serv8/WebApiInformes/",      
+      "secure": false,
+      "changeOrigin": true,
+      "logLevel": "debug"
+    }
+    
+  }
